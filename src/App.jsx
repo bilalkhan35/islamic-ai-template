@@ -2,7 +2,6 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
-// 💡 These are placeholder pages – users can replace them easily
 import Home from "./pages/Home";
 import ChatPage from "./pages/ChatPage";
 import InfoPage from "./pages/InfoPage";
@@ -12,23 +11,33 @@ import Quran from "./pages/Quran";
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "Quran", path: "/quran" },
-  { name: "AsmaUlHusna", path: "/daily-dua" },
+  { name: "Asma ul Husna", path: "/daily-dua" },
   { name: "Hadith", path: "/hadith-of-the-day" },
   { name: "Islamic Q&A", path: "/qa" },
 ];
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-100 to-emerald-200 text-gray-800">
-      {/* 🔼 Sticky header for navigation */}
+    <div className="islamic-pattern-bg" style={{ minHeight: '100vh' }}>
       <Navbar title="Islamic AI" navLinks={navLinks} />
 
-      {/* 🔽 Container for routed content */}
-      <div className="max-w-6xl mx-auto px-4 py-6">
-        <div className="bg-white shadow-xl rounded-2xl p-6">
+      <main style={{
+        maxWidth: '72rem',
+        margin: '0 auto',
+        padding: '1.5rem 1rem 3rem',
+      }}>
+        <div className="animate-fade-in-up" style={{
+          background: 'rgba(255, 255, 255, 0.92)',
+          backdropFilter: 'blur(20px)',
+          WebkitBackdropFilter: 'blur(20px)',
+          borderRadius: '1.25rem',
+          padding: '1.5rem',
+          border: '1px solid rgba(255, 255, 255, 0.5)',
+          boxShadow: '0 20px 60px rgba(0, 0, 0, 0.1), 0 4px 20px rgba(0, 0, 0, 0.05)',
+          minHeight: '60vh',
+        }}>
           <Routes>
             <Route path="/" element={<Home />} />
-
             <Route
               path="/chat"
               element={
@@ -45,7 +54,18 @@ export default function App() {
             <Route path="/qa" element={<ChatPage title="Islamic Q&A" />} />
           </Routes>
         </div>
-      </div>
+      </main>
+
+      {/* Footer */}
+      <footer style={{
+        textAlign: 'center',
+        padding: '1.5rem 1rem',
+        color: 'rgba(255, 255, 255, 0.5)',
+        fontSize: '0.8rem',
+        fontFamily: 'Inter, sans-serif',
+      }}>
+        <p>© 2025 Islamic AI. Built with ❤️ for the Ummah.</p>
+      </footer>
     </div>
   );
 }
