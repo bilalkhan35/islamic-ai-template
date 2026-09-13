@@ -67,7 +67,7 @@ export default function ChatPage({
   title = "AI Chat",
   placeholder = "Ask your question...",
   apiUrl = "/api/chat",
-  model = "google/gemini-2.5-flash",
+  model = "mistralai/mistral-7b-instruct:free",
 }) {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);

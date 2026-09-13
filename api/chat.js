@@ -1,8 +1,8 @@
-const DEFAULT_MODEL = "google/gemini-2.5-flash";
+const DEFAULT_MODEL = "mistralai/mistral-7b-instruct:free";
 const DEFAULT_FALLBACK_MODELS = [
-  "google/gemini-2.5-flash",
-  "google/gemini-2.5-pro",
-  "meta-llama/llama-3.3-70b-instruct",
+  "mistralai/mistral-7b-instruct:free",
+  "mistralai/mistral-7b-instruct-v0.3",
+  "mistralai/mistral-7b-instruct",
 ];
 const REQUEST_TIMEOUT_MS = 20000;
 

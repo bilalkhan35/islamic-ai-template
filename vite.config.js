@@ -3,11 +3,10 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import process from "node:process";
 
-const DEFAULT_MODEL = "google/gemini-2.5-flash";
+const DEFAULT_MODEL = "mistralai/mistral-7b-instruct";
 const DEFAULT_FALLBACK_MODELS = [
-  "google/gemini-2.5-flash",
-  "google/gemini-2.5-pro",
-  "meta-llama/llama-3.3-70b-instruct",
+  "mistralai/mistral-7b-instruct-v0.3",
+  "openrouter/auto",
 ];
 const REQUEST_TIMEOUT_MS = 20000;
 
